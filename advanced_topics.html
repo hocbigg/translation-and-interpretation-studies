@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics in Translation and Interpretation Studies</title>
+  <meta name="description" content="Advanced Topics in Translation and Interpretation Studies curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/translation-and-interpretation-studies/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics in Translation and Interpretation Studies">
+  <meta property="og:description" content="Advanced Topics in Translation and Interpretation Studies curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/translation-and-interpretation-studies/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/translation-and-interpretation-studies/">Translation And Interpretation Studies</a></li>
+      <li><a href="/translation-and-interpretation-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/translation-and-interpretation-studies/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/translation-and-interpretation-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-in-translation-and-interpretation-studies">Advanced Topics in Translation and Interpretation Studies</h1>
+<p>This curriculum branches out from the Core Curriculum into five specialized tracks representing distinct subdisciplines and high-level professional pathways. Learners should select one or two tracks aligned with their specific career objectives or research interests rather than attempting to complete all tracks sequentially.</p>
+<ul>
+<li><strong>Specialized Domain Translation</strong> - Advanced translation practice in legal, medical, and scientific/technical domains, emphasizing specialized terminology, statutory conventions, and conceptual rigor.</li>
+<li><strong>Literary Translation</strong> - The aesthetics, hermeneutics, and craft of translating fiction, poetry, and creative prose, including voice modulation and cultural transfer.</li>
+<li><strong>Audiovisual Translation and Localization</strong> - Technical constraints and semiotic strategies governing subtitling, media accessibility, and video game transcreation.</li>
+<li><strong>Advanced Interpreting</strong> - High-stakes simultaneous conference interpreting and complex community-based dialogue interpreting across institutional settings.</li>
+<li><strong>Translation Technology and MT Post-Editing</strong> - Computational architectures of neural machine translation, enterprise localization pipelines, corpus linguistics, and post-editing standards.</li>
+</ul>
+<h2 id="specialized-domain-translation">Specialized Domain Translation</h2>
+<p>This track develops advanced translation competence in high-liability technical domains where terminological precision and genre compliance are decisive.</p>
+<p>Legal Translation: <a href="https://books.google.com/books?isbn=9781900650465" target="_blank" rel="noopener noreferrer">Legal Translation Explained (Enrique Alcaraz &amp; Brian Hughes)</a> - A systematic guide to common law and civil law terminology, statutory drafting conventions, and translational strategies for binding legal instruments.</p>
+<p>Medical Translation: <a href="https://books.google.com/books?isbn=9781900650830" target="_blank" rel="noopener noreferrer">Medical Translation Step by Step (Vicent Montalt &amp; Maria González-Davies)</a> - A task-based methodology covering medical communication genres, clinical trial protocols, regulatory documentation, and pharmacology.</p>
+<p>Medical Terminology Foundation: <a href="https://www.dmu.edu/medterms/" target="_blank" rel="noopener noreferrer">Medical Terminology Course (Des Moines University)</a> - A comprehensive, self-paced open course detailing root words, prefixes, and suffixes across anatomical systems, establishing the physiological grounding required for medical translation.</p>
+<p>Scientific and Technical Translation: <a href="https://archive.org/details/scientifictechni0000byrn" target="_blank" rel="noopener noreferrer">Scientific and Technical Translation Explained (Jody Byrne)</a> - An open-access guide focusing on technical communication theory, user documentation ergonomics, passive construction handling, and patent translation strategies.</p>
+<h2 id="literary-translation">Literary Translation</h2>
+<p>This track examines the interpretive, philosophical, and stylistic challenges of rendering creative voice, cultural resonance, and poetic form across languages.</p>
+<p>Translation Poetics and Visibility: <a href="https://books.google.com/books?isbn=9780415394550" target="_blank" rel="noopener noreferrer">The Translator's Invisibility: A History of Translation (Lawrence Venuti)</a> - A foundational critical history analyzing the cultural consequences of ethnocentric fluency, articulating the seminal dichotomy between domesticating and foreignizing translation.</p>
+<p>Philosophy and Hermeneutics: <a href="https://archive.org/details/afterbabel00geor" target="_blank" rel="noopener noreferrer">After Babel: Aspects of Language and Translation (George Steiner)</a> - A classic, borrowable treatise exploring the hermeneutic motion, linguistic relativity, the limits of untranslatability, and the cognitive ontology of interlingual transfer.</p>
+<p>Literary Craft and Stylistics: <a href="https://books.google.com/books?isbn=9781853595196" target="_blank" rel="noopener noreferrer">Literary Translation: A Practical Guide (Clifford E. Landers)</a> - A pragmatic handbook addressing the micro-decisions of translating prose fiction, including character idiolects, puns, regional dialects, and publishing relationships.</p>
+<p>Contemporary Practice and Masterclasses: <a href="https://www.youtube.com/@bcltUK" target="_blank" rel="noopener noreferrer">The Sebald Lectures on Literary Translation (British Centre for Literary Translation)</a> - An open lecture series featuring masterclasses by renowned literary translators and authors on creative ethics, voice, and the lived art of literary mediation.</p>
+<h2 id="audiovisual-translation-and-localization">Audiovisual Translation and Localization</h2>
+<p>This track covers screen translation modalities, accessibility requirements, and interactive media adaptation governed by multimodal and temporal constraints.</p>
+<p>Subtitling Concepts and Technical Constraints: <a href="https://books.google.com/books?isbn=9781138940543" target="_blank" rel="noopener noreferrer">Subtitling: Concepts and Practices (Jorge Díaz Cintas &amp; Aline Remael)</a> - The standard modern handbook detailing spotting, spatial and temporal constraints, semiotic cohesion, condensation strategies, and humor adaptation.</p>
+<p>Industry Subtitling Standards: <a href="https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements" target="_blank" rel="noopener noreferrer">Netflix Timed Text Style Guide: General Requirements (Netflix Partner Help Center)</a> - An authoritative industry standard detailing character limits, reading speeds, event duration, line-break rules, and audio synchronization parameters.</p>
+<p>Media Accessibility and Audio Description: <a href="https://www.adlabpro.eu/coursematerials/" target="_blank" rel="noopener noreferrer">ADLAB PRO Course Materials (ADLAB PRO Consortium)</a> - A free, modular European training curriculum with video modules, transcripts, and exercises for crafting audio descriptions for blind and visually impaired audiences.</p>
+<p>Video Game Localization: <a href="https://books.google.com/books?isbn=9789027224569" target="_blank" rel="noopener noreferrer">Game Localization: Translating for the Global Digital Entertainment Industry (Minako O'Hagan &amp; Carme Mangiron)</a> - A specialized study covering the game localization pipeline, asset management, humor adaptation, string length limitations, and culturalization.</p>
+<h2 id="advanced-interpreting">Advanced Interpreting</h2>
+<p>This track cultivates professional competence in simultaneous booth technique, conference preparation, and community interpreting in high-stakes public settings.</p>
+<p>Conference Interpreting Pedagogy: <a href="https://books.google.com/books?isbn=9789027258625" target="_blank" rel="noopener noreferrer">Conference Interpreting: A Complete Course (Robin Setton &amp; Andrew Dawrant)</a> - An advanced training coursebook covering simultaneous interpreting mechanics, cognitive load distribution, decalage management, and international conference settings.</p>
+<p>Conference Interpreting Virtual Practice: <a href="https://commission.europa.eu/about/departments-and-executive-agencies/interpretation/interpretation-training-toolbox/scictrain-training-modules-interpreting-students_en" target="_blank" rel="noopener noreferrer">SCICtrain: Training Modules for Interpreting Students (European Commission DG Interpretation)</a> - A free video training library produced by EU staff interpreters, providing demonstrations and exercises in simultaneous technique, retour interpreting, and accreditation preparation.</p>
+<p>Community and Dialogue Interpreting: <a href="https://books.google.com/books?isbn=9780230001896" target="_blank" rel="noopener noreferrer">Community Interpreting (Sandra Hale)</a> - A comprehensive academic and applied treatment of dialogue interpreting across courtroom, police, and healthcare environments, focusing on power dynamics and discursive roles.</p>
+<p>Humanitarian and Public Service Practice: <a href="https://kayaconnect.org/course/view.php?id=2544" target="_blank" rel="noopener noreferrer">Interpreter Training Course (Kaya Connect / Save the Children)</a> - A free forty-hour interactive training program providing scenarios, role-plays, and protocols for interpreting in humanitarian aid and community crisis encounters.</p>
+<h2 id="translation-technology-and-mt-post-editing">Translation Technology and MT Post-Editing</h2>
+<p>This track explores the computational systems driving modern translation, including neural machine translation architectures, corpus exploitation, and automated quality control.</p>
+<p>Neural Machine Translation Architectures: <a href="https://www.coursera.org/learn/machinetranslation" target="_blank" rel="noopener noreferrer">Machine Translation (Coursera/Karlsruhe Institute of Technology)</a> - A university-level open course covering the mathematical and algorithmic progression from statistical models to sequence-to-sequence neural networks, attention mechanisms, and BLEU evaluation.</p>
+<p>Post-Editing Methodology and Quality Standards: <a href="https://www.taus.net/resources/reports/mt-post-editing-guidelines" target="_blank" rel="noopener noreferrer">MT Post-editing Guidelines (TAUS)</a> - The global industry reference document defining light versus full post-editing criteria, throughput expectations, and error typologies.</p>
+<p>Localization Engineering and Management: <a href="https://localizationacademy.com/introduction-to-localization/" target="_blank" rel="noopener noreferrer">Introduction to Localization (Localization Academy)</a> - A structured industry course examining the software localization life cycle, internationalization principles, translation management systems (TMS), and file parsing.</p>
+<p>Corpus-Based Translation and Terminology Extraction: <a href="https://langsci-press.org/catalog/book/76" target="_blank" rel="noopener noreferrer">New Directions in Corpus-Based Translation Studies edited by Claudio Fantinuoli and Federico Zanettin (Language Science Press)</a> - An open-access research volume exploring the compilation, tagging, and computational analysis of bilingual parallel and comparable corpora for translation practice.</p>
+    </article>
+  </main>
+
+</body>
+</html>

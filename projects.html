@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Projects</title>
+  <meta name="description" content="Projects curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/translation-and-interpretation-studies/projects.html">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Projects curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/translation-and-interpretation-studies/projects.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/translation-and-interpretation-studies/">Translation And Interpretation Studies</a></li>
+      <li><a href="/translation-and-interpretation-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/translation-and-interpretation-studies/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/translation-and-interpretation-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="projects">Projects</h1>
+<blockquote>
+<p>"What I cannot create, I do not understand." — Richard Feynman</p>
+</blockquote>
+<ul>
+<li><a href="#create-your-own-subtitle-files">Subtitle Files</a></li>
+<li><a href="#translate-your-own-wikipedia-articles">Wikipedia Articles</a></li>
+<li><a href="#produce-your-own-humanitarian-translations">Humanitarian Translations</a></li>
+<li><a href="#build-your-own-terminology-databases">Terminology Databases</a></li>
+<li><a href="#execute-your-own-software-localization-projects">Software Localization Projects</a></li>
+<li><a href="#build-your-own-translator-portfolios">Translator Portfolios</a></li>
+<li><a href="#write-your-own-comparative-translation-analyses">Comparative Translation Analyses</a></li>
+<li><a href="#write-your-own-translation-commentaries">Translation Commentaries</a></li>
+<li><a href="#conduct-your-own-translation-quality-assessments">Translation Quality Assessments</a></li>
+<li><a href="#compile-your-own-conference-interpreter-dossiers">Conference Interpreter Dossiers</a></li>
+<li><a href="#record-your-own-consecutive-interpreting-performances">Consecutive Interpreting Performances</a></li>
+</ul>
+<h2 id="create-your-own-subtitle-files">Create your own subtitle files</h2>
+<ul>
+<li><a href="https://www.ted.com/participate/translate/get-started" target="_blank" rel="noopener noreferrer">TED Translators: Get Started</a> - The official onboarding guide for volunteer subtitlers, detailing transcription, interlingual subtitling, and review workflows on CaptionHub and Amara.</li>
+<li><a href="https://www.archives.gov/files/amara-quickstart-guide.pdf" target="_blank" rel="noopener noreferrer">Quickstart Guide to Amara Subtitle Editor (US National Archives)</a> - A practical step-by-step walkthrough covering subtitle entry, timecode synchronization, line breaks, and video caption export.</li>
+<li><a href="https://bbc.github.io/subtitle-guidelines/" target="_blank" rel="noopener noreferrer">BBC Subtitle Guidelines</a> - The comprehensive technical specification defining reading speeds, line lengths, display durations, and syntactic segmentation.</li>
+<li><a href="https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements" target="_blank" rel="noopener noreferrer">Netflix Timed Text Style Guide: General Requirements</a> - The commercial industry benchmark specifying character limits, shot-change rules, dual-speaker dashes, and dialogue compression.</li>
+</ul>
+<h2 id="translate-your-own-wikipedia-articles">Translate your own Wikipedia articles</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Wikipedia:Content_translation_tool" target="_blank" rel="noopener noreferrer">Wikipedia: Content Translation Tool Guide</a> - The official Wikimedia manual on using the machine-assisted Content Translation environment to adapt cross-lingual wiki entries with synchronized references and infoboxes.</li>
+<li><a href="https://www.wikihow.com/Translate-a-Wikipedia-Article" target="_blank" rel="noopener noreferrer">How to Translate a Wikipedia Article (wikiHow)</a> - A visual walkthrough detailing source article selection, account configuration, target wiki formatting, and manual post-editing.</li>
+<li><a href="https://en.wikipedia.org/wiki/Wikipedia:Translation" target="_blank" rel="noopener noreferrer">Wikipedia: Translation Guidelines and Best Practices</a> - The community-consensus policy outlining attribution requirements, licensing compliance, neutral point of view preservation, and machine translation post-editing standards.</li>
+</ul>
+<h2 id="produce-your-own-humanitarian-translations">Produce your own humanitarian translations</h2>
+<ul>
+<li><a href="https://community.globalvoices.org/2015/05/a-beginners-guide-to-translating-global-voices-stories/" target="_blank" rel="noopener noreferrer">A Beginner's Guide to Translating Global Voices Stories (Global Voices)</a> - A step-by-step editorial guide for translating citizen journalism articles, focusing on journalistic style, local context glossing, and editorial review.</li>
+<li><a href="https://translatorswithoutborders.org/volunteer" target="_blank" rel="noopener noreferrer">Translators without Borders Volunteer Translator Onboarding (CLEAR Global)</a> - The orientation guide and platform portal for translating vital crisis relief information, healthcare instructions, and emergency communications for NGOs.</li>
+<li><a href="https://www.kiva.org/teams/review_and_translation" target="_blank" rel="noopener noreferrer">Kiva Review and Translation Team Guide</a> - A structured procedural guide for translating and editing real microloan borrower profiles from global field partners into clear, compliant English.</li>
+</ul>
+<h2 id="build-your-own-terminology-databases">Build your own terminology databases</h2>
+<ul>
+<li><a href="https://mastertcloc.unistra.fr/how-to-build-a-termbase-from-scratch/" target="_blank" rel="noopener noreferrer">How to Build a Termbase From Scratch (TCLoc Master's / University of Strasbourg)</a> - A practitioner guide to designing concept-oriented termbases, establishing granular data categories, setting entry statuses, and adhering to ISO standards.</li>
+<li><a href="https://www.cotsoes.org/sites/default/files/CST_Terminology_Management_for_Translation_A_Starter_Guide.pdf" target="_blank" rel="noopener noreferrer">Terminology Management for Translation: A Starter Guide (COTSOES)</a> - The official inter-institutional guide from the Conference of Translation Services of European States on compiling, structuring, and maintaining institutional multilingual termbases.</li>
+<li><a href="https://omegat.org/documentation" target="_blank" rel="noopener noreferrer">OmegaT Documentation and Glossary Tutorial (OmegaT)</a> - The official technical manual on generating, formatting, and integrating plain-text tab-delimited and TBX glossary files within an open-source CAT workflow.</li>
+</ul>
+<h2 id="execute-your-own-software-localization-projects">Execute your own software localization projects</h2>
+<ul>
+<li><a href="https://localizationacademy.com/introduction-to-localization/" target="_blank" rel="noopener noreferrer">Introduction to Localization (Localization Academy)</a> - A structured open course with hands-on assignments guiding learners through auditing a live product's localization readiness, managing file formats, and executing translation workflows.</li>
+<li><a href="https://docs.weblate.org/en/latest/workflows.html" target="_blank" rel="noopener noreferrer">Software Translation Workflows (Weblate Documentation)</a> - A comprehensive open documentation guide explaining string extraction, internationalization variable handling, plural forms, and continuous localization pipelines.</li>
+</ul>
+<h2 id="build-your-own-translator-portfolios">Build your own translator portfolios</h2>
+<ul>
+<li><a href="https://poeditor.com/blog/localization-portfolio/" target="_blank" rel="noopener noreferrer">How to Create a Localization Portfolio (POEditor Blog)</a> - A strategic walkthrough for curating translation and localization samples, drafting problem-solution case studies, and presenting UI adaptations without breaching non-disclosure agreements.</li>
+<li><a href="https://locdandloaded.net/2023/05/09/getting-started-in-game-localization/" target="_blank" rel="noopener noreferrer">Getting Started in Game Localization: Building a Portfolio (Loc'd and Loaded)</a> - An expert game localizer's detailed guide to assembling transcreation samples, mock game tests, and specialized glossaries to demonstrate subject-matter expertise.</li>
+</ul>
+<h2 id="write-your-own-comparative-translation-analyses">Write your own comparative translation analyses</h2>
+<ul>
+<li><a href="https://writingcenter.fas.harvard.edu/pages/how-write-comparative-analysis" target="_blank" rel="noopener noreferrer">How to Write a Comparative Analysis (Harvard College Writing Center)</a> - The classic methodological guide on framing points of comparison, structuring thesis arguments, and alternating between text-by-text and point-by-point organizational schemes.</li>
+<li><a href="https://readingintranslation.com/2013/11/tips-for-reviewers-comparative-analysis/" target="_blank" rel="noopener noreferrer">Tips for Reviewers: Comparative Analysis (Reading in Translation)</a> - An applied essay demonstrating how to systematically compare divergent translations of the same source passage, highlighting prosody, lexical shifts, and translator stance.</li>
+</ul>
+<h2 id="write-your-own-translation-commentaries">Write your own translation commentaries</h2>
+<ul>
+<li><a href="https://books.google.com/books?isbn=9781032227030" target="_blank" rel="noopener noreferrer">Writing a Translation Commentary by Penélope Johnson (Google Books)</a> - [Paid book] The definitive pedagogical guide dedicated to drafting reflective academic commentaries, covering theoretical contextualization, skopos justification, and translation problem categorization.</li>
+<li><a href="https://readingintranslation.com/2013/11/tips-for-reviewers-translators-introductions-are-your-cheatsheet/" target="_blank" rel="noopener noreferrer">Tips for Reviewers: Translators' Introductions Are Your Cheatsheet (Reading in Translation)</a> - An analytical guide examining how published translators explain their theoretical strategies, historical constraints, and stylistic decisions in formal introductions.</li>
+</ul>
+<h2 id="conduct-your-own-translation-quality-assessments">Conduct your own translation quality assessments</h2>
+<ul>
+<li><a href="https://themqm.org/" target="_blank" rel="noopener noreferrer">Multidimensional Quality Metrics (MQM) Definition and Error Typology (W3C)</a> - The open, international framework defining standardized hierarchical categories and severity levels (minor, major, critical) for measuring translation and post-editing quality.</li>
+<li><a href="https://www.taus.net/resources/reports/mt-post-editing-guidelines" target="_blank" rel="noopener noreferrer">MT Post-editing Guidelines and Quality Benchmarks (TAUS)</a> - The industry reference defining error evaluation criteria, difference thresholds between light and full post-editing, and measurable translation quality metrics.</li>
+</ul>
+<h2 id="compile-your-own-conference-interpreter-dossiers">Compile your own conference interpreter dossiers</h2>
+<ul>
+<li><a href="https://aiic.org/document/547/AIICWebzine_Apr2004_2_Practical_guide_for_professional_conference_interpreters_EN.pdf" target="_blank" rel="noopener noreferrer">Practical Guide for Professional Conference Interpreters: Preparing for the Conference (AIIC)</a> - The official AIIC practitioner handbook on gathering source documentation, structuring domain briefings, building ad-hoc meeting glossaries, and aligning with organizers.</li>
+<li><a href="https://speech-repository.webcloud.ec.europa.eu/" target="_blank" rel="noopener noreferrer">Speech Repository: Search Speeches (European Commission)</a> - An extensive searchable database of over 4,000 real conference and training speeches organized by language, subject domain, and difficulty to prepare thematic mock dossiers against.</li>
+<li><a href="https://orcit.eu/" target="_blank" rel="noopener noreferrer">Online Resources for Conference Interpreter Training (ORCIT)</a> - An interactive training platform offering pedagogical modules on conference preparation, background research, and terminology activation.</li>
+</ul>
+<h2 id="record-your-own-consecutive-interpreting-performances">Record your own consecutive interpreting performances</h2>
+<ul>
+<li><a href="https://commission.europa.eu/about/departments-and-executive-agencies/interpretation/interpretation-training-toolbox/scictrain-training-modules-interpreting-students_en" target="_blank" rel="noopener noreferrer">SCICtrain: Training Modules for Interpreting Students (European Commission DG Interpretation)</a> - A comprehensive open video training curriculum demonstrating consecutive interpreting techniques, active listening, split attention, and self-evaluation protocols.</li>
+<li><a href="https://books.google.com/books?isbn=9781138123205" target="_blank" rel="noopener noreferrer">Note-taking for Consecutive Interpreting: A Short Course by Andrew Gillies (Google Books)</a> - [Paid book] The standard practical coursebook on Rozan-style vertical notation, abbreviation systems, margin utilization, and self-auditing recorded consecutive deliveries.</li>
+</ul>
+    </article>
+  </main>
+
+</body>
+</html>

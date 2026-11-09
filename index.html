@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Hocbigg - Translation and Interpretation Studies</title>
+  <meta name="description" content="Path to a free self-taught education in Translation and Interpretation Studies.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/translation-and-interpretation-studies/">
+  <meta property="og:title" content="Hocbigg - Translation and Interpretation Studies">
+  <meta property="og:description" content="Path to a free self-taught education in Translation and Interpretation Studies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/translation-and-interpretation-studies/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/translation-and-interpretation-studies/">Translation And Interpretation Studies</a></li>
+      <li><a href="/translation-and-interpretation-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/translation-and-interpretation-studies/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/translation-and-interpretation-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+<header class="page-header">
+  <img src="/images/logo.png" alt="Hocbigg logo">
+  <h1>Hocbigg - Translation and Interpretation Studies</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Translation and Interpretation Studies.</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-08">2026-10-08</time></small></p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Translation and Interpretation Studies examines how meaning, register, communicative intent, and cultural context are transferred across languages—both in written texts (translation) and real-time spoken or signed discourse (interpreting). Far from a mechanical exchange of lexical equivalents, interlingual mediation requires navigating syntactic asymmetries, pragmatic implicatures, rhetorical conventions, and cognitive pressures. This core curriculum provides self-directed learners with the theoretical frameworks, linguistic toolkits, practical methods, and technological foundations necessary to make principled, defensible decisions across languages.</p>
+<p>This curriculum is intended for independent learners who already have strong working proficiency (typically high B2 to C1 level or above) in at least two languages. It is not a foreign language learning guide; it assumes bilingual comprehension and expression are already established and focuses entirely on the separate discipline of translating and interpreting between them. No previous exposure to formal linguistics, translation theory, or professional practice is required.</p>
+<p>All subjects are framed in a language-neutral manner so that the principles, models, and workflows apply to any language combination.</p>
+<h3 id="curriculum-structure">Curriculum Structure</h3>
+<p>The curriculum is structured to guide you from general foundations through distinct written and oral modalities to professional workflows:</p>
+<ul>
+<li><strong>Foundational Grounding:</strong> Begin with <strong>Introduction to Translation Studies</strong> and <strong>Linguistics for Translation</strong>. These establish core terminology, translator competence models, and the linguistic concepts (such as semantic hierarchies, text cohesion, and pragmatic equivalence) that underpin all cross-lingual work.</li>
+<li><strong>Written Translation:</strong> Work through <strong>Translation Theory</strong> to understand the historical paradigms governing the field (from equivalence to functionalist Skopos theory and descriptive translation studies), followed by <strong>Translation Practice and Methodology</strong> to apply source-text analysis, shift identification, and editing strategies to authentic texts.</li>
+<li><strong>Interpreting:</strong> Progress through <strong>Introduction to Interpreting Studies</strong> to examine the modalities, settings, and cognitive effort models of oral translation, then move directly into <strong>Consecutive Interpreting and Note-Taking</strong> to build practical techniques in active listening, memory retention, and structured notation.</li>
+<li><strong>Tools and Professional Practice:</strong> <strong>Computer-Assisted Translation and Language Technology</strong> and <strong>Ethics and Professional Standards</strong> should be integrated alongside your practical study. They ground your learning in contemporary translation memory environments, termbases, and the ethical dilemmas surrounding neutrality, agency, and professional codes of conduct.</li>
+</ul>
+<h3 id="beyond-the-core">Beyond the Core</h3>
+<p>This page is strictly limited to the foundational subjects every learner in the discipline should master before branching into specialized work. Once you have completed this core, consult <a href="advanced_topics.html">Advanced Topics</a> to explore specialized tracks such as legal and medical translation, audiovisual subtitling, conference interpreting, and neural machine translation post-editing. To apply your skills through concrete deliverables—such as compiling conference interpreter dossiers, creating timed subtitle files, or writing reflexive translation commentaries—explore <a href="projects.html">Projects</a>.</p>
+<h2 id="curriculum">Curriculum</h2>
+<p>This curriculum provides a structured foundation in the principles, linguistic foundations, professional practices, and technologies of translation and interpreting for self-directed beginners with working proficiency in at least two languages.</p>
+<h3 id="introduction-to-translation-studies">Introduction to Translation Studies</h3>
+<p>This subject examines the scope of translation studies, the multifaceted role of the translator as a cultural mediator, and the practical realities of the profession.</p>
+<p><a href="https://www.futurelearn.com/courses/working-with-translation" target="_blank" rel="noopener noreferrer">Working with Translation: Theory and Practice (FutureLearn/Cardiff University)</a> - A free four-week introductory course that explores multilingual communication, cultural mediation, and translation scenarios across healthcare, legal, and creative settings.</p>
+<p><a href="https://www.open.edu/openlearn/languages/learning-languages/translation-career" target="_blank" rel="noopener noreferrer">Translation as a Career (OpenLearn/The Open University)</a> - An introductory short course exploring translator competence, professional workflows, and initial translation exercises; best taken alongside the Cardiff course for an operational overview of the profession.</p>
+<p><a href="https://books.google.com/books?isbn=9780367227326" target="_blank" rel="noopener noreferrer">Becoming a Translator: An Introduction to the Theory and Practice of Translation by Douglas Robinson (Google Books)</a> - A learner-centered textbook that bridges practical day-to-day translating realities with introductory concepts, serving as the primary reading for this orientation stage.</p>
+<h3 id="linguistics-for-translation">Linguistics for Translation</h3>
+<p>This subject covers how semantic relations, grammatical structures, discourse patterns, and pragmatics operate across languages to convey equivalent meaning in context.</p>
+<p><a href="https://books.google.com/books?isbn=9781138666887" target="_blank" rel="noopener noreferrer">In Other Words: A Coursebook on Translation by Mona Baker (Google Books)</a> - The canonical coursebook linking linguistic levels—words, collocations, grammar, textual cohesion, and pragmatics—to practical translation challenges across diverse language pairs.</p>
+<p><a href="https://books.google.com/books?isbn=9780582021907" target="_blank" rel="noopener noreferrer">Discourse and the Translator by Basil Hatim and Ian Mason (Google Books)</a> - A complementary text that deepens Baker's linguistic framework by analyzing register, socio-cultural context, and text typology; best read after completing Baker.</p>
+<h3 id="translation-theory">Translation Theory</h3>
+<p>This subject introduces the central theoretical paradigms that have shaped modern translation studies, from linguistic equivalence and functionalism to descriptive and cultural approaches.</p>
+<p><a href="https://archive.org/details/introducingtrans0004mund" target="_blank" rel="noopener noreferrer">Introducing Translation Studies: Theories and Applications by Jeremy Munday (Internet Archive)</a> - The definitive survey textbook tracking the field's theoretical progression from linguistic equivalence to cultural and digital turns; serves as the primary spine of this subject.</p>
+<p><a href="https://books.google.com/books?isbn=9780415553636" target="_blank" rel="noopener noreferrer">Exploring Translation Theories by Anthony Pym (Google Books)</a> - An alternative core textbook offering a concise, paradigm-based comparison of Western translation theories, emphasizing the practical implications of each theoretical stance.</p>
+<p><a href="https://www.youtube.com/playlist?list=PLyQOhfgRQAKbbcqQMKQ229uY72VldVtke" target="_blank" rel="noopener noreferrer">Anthony Pym's Introduction to Language Translation Lectures (YouTube)</a> - A complete undergraduate lecture series recorded at the University of Melbourne that follows the chapters of Pym's textbook; use alongside either Munday or Pym for an accessible lecture walkthrough.</p>
+<p><a href="https://books.google.com/books?isbn=9780367235970" target="_blank" rel="noopener noreferrer">The Translation Studies Reader edited by Lawrence Venuti (Google Books)</a> - An essential anthology of seminal twentieth- and twenty-first-century primary essays; read selected essays in dialogue with the corresponding chapters in Munday or Pym.</p>
+<h3 id="translation-practice-and-methodology">Translation Practice and Methodology</h3>
+<p>This subject focuses on source-text analysis, translation procedures, shifts, register adjustment, and target-text editing techniques across text types.</p>
+<p><a href="https://archive.org/details/textbookoftransl0000newm" target="_blank" rel="noopener noreferrer">A Textbook of Translation by Peter Newmark (Internet Archive)</a> - A freely borrowable practical guide covering text analysis, semantic versus communicative translation methods, and translation procedures applicable to any language combination.</p>
+<p><a href="https://www.coursera.org/learn/translation-in-practice" target="_blank" rel="noopener noreferrer">Translation in Practice (Coursera/Nanjing University)</a> - An audit-mode video course illustrating practical translation techniques, register decisions, and editing; while exercises use English and Chinese, the underlying problem-solving steps directly complement Newmark's framework.</p>
+<h3 id="introduction-to-interpreting-studies">Introduction to Interpreting Studies</h3>
+<p>This subject covers the origins, historical evolution, operational modes, and cognitive dimensions of interpreting across conference, legal, healthcare, and community settings.</p>
+<p><a href="https://books.google.com/books?isbn=9781032030609" target="_blank" rel="noopener noreferrer">Introducing Interpreting Studies by Franz Pöchhacker (Google Books)</a> - The standard academic textbook mapping the research paradigms, historical development, modalities, and professional domains of the interpreting discipline.</p>
+<p><a href="https://books.google.com/books?isbn=9789027224323" target="_blank" rel="noopener noreferrer">Basic Concepts and Models for Interpreter and Translator Training by Daniel Gile (Google Books)</a> - Complements Pöchhacker by detailing the cognitive mechanics of oral translation, notably through the canonical Effort Models for simultaneous and consecutive interpreting.</p>
+<h3 id="consecutive-interpreting-and-note-taking">Consecutive Interpreting and Note-Taking</h3>
+<p>This subject develops the practical core skills of consecutive interpreting, including active listening, speech analysis, memory retention, structured notation, and oral reformulation.</p>
+<p><a href="https://books.google.com/books?isbn=9781138123205" target="_blank" rel="noopener noreferrer">Note-taking for Consecutive Interpreting: A Short Course by Andrew Gillies (Google Books)</a> - The standard practical workbook guiding learners step by step through speech analysis, non-verbal notation, Rozan's principles, and notebook layout.</p>
+<p><a href="https://orcit.eu/" target="_blank" rel="noopener noreferrer">ORCIT: Online Resources for Conference Interpreter Training (ORCIT)</a> - An open educational project developed by European universities offering interactive pedagogical modules and video exercises in listening, analysis, memory, and notation to practice alongside Gillies.</p>
+<h3 id="computer-assisted-translation-and-language-technology">Computer-Assisted Translation and Language Technology</h3>
+<p>This subject introduces the computational tools modern translators rely on, focusing on translation memory, termbases, machine translation post-editing, and digital workflows.</p>
+<p><a href="https://archive.org/details/computeraidedtra0000bowk" target="_blank" rel="noopener noreferrer">Computer-Aided Translation Technology: A Practical Introduction by Lynne Bowker (Internet Archive)</a> - A borrowable introductory text detailing the core concepts behind translation memories, alignment, term extraction, and corpus tools before tool-specific application.</p>
+<p><a href="https://omegat.org/documentation" target="_blank" rel="noopener noreferrer">OmegaT Documentation and Beginner Guides (OmegaT)</a> - The official guided documentation and user tutorials for the leading open-source CAT tool; work through this after Bowker to gain hands-on proficiency in project creation, segmentation, and translation memory management.</p>
+<h3 id="ethics-and-professional-standards">Ethics and Professional Standards</h3>
+<p>This subject examines the ethical frameworks, professional responsibilities, and decision-making dilemmas translators and interpreters encounter in commercial, institutional, and humanitarian contexts.</p>
+<p><a href="https://books.google.com/books?isbn=9780367708528" target="_blank" rel="noopener noreferrer">Translation Ethics by Joseph Lambert (Google Books)</a> - An introductory textbook examining philosophical ethics, translator agency, neutrality versus advocacy, emerging machine-translation dilemmas, and the critical evaluation of professional association codes of conduct.</p>
+    </article>
+  </main>
+
+</body>
+</html>
